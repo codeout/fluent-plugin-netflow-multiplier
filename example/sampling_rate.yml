@@ -1,0 +1,5 @@
+---
+# exporter_ip_address: sampling_rate
+
+192.168.0.1: 1000
+192.168.0.2: 2000

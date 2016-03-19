@@ -6,6 +6,10 @@ Fluentd filter plugin to multiply sampled netflow counters by sampling rate.
 
 Netflow exporters usually export netflow data after sampling with specific rate and collectors need to multiply the data by the sampling rate to estimate actual values. This netflow filter plugin finds counters and sampling rate field in each netflow and calculate into other counter fields. Default or exporter-specific sampling rate will be used if no sampling rate found in netflow data.
 
+**NOTE**
+
+Netflow v10 (a.k.a. IPFIX) is not tested.
+
 ## Installation
 
 Use ```td-agent-gem``` or ```fluent-gem```:
