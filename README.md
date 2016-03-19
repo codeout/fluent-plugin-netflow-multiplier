@@ -1,5 +1,7 @@
 # fluent-plugin-netflow-multipler
 
+[![Build Status](https://travis-ci.org/codeout/fluent-plugin-netflow-multiplier.svg)](https://travis-ci.org/codeout/fluent-plugin-netflow-multiplier)
+
 ## Overview
 
 Fluentd filter plugin to multiply sampled netflow counters by sampling rate.
