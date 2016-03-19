@@ -1,36 +1,34 @@
-# Fluent::Plugin::Netflow::Multiplier
+# fluent-plugin-netflow-multipler
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fluent/plugin/netflow/multiplier`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Overview
 
-TODO: Delete this and the text above, and describe your gem
+Fluentd filter plugin to multiply sampled netflow counters by sampling rate.
+
+Netflow exporters usually export netflow data after sampling with specific rate and collectors need to multiply the data by the sampling rate to estimate actual values. This netflow filter plugin finds counters and sampling rate field in each netflow and calculate into other counter fields. Default or exporter-specific sampling rate will be used if no sampling rate found in netflow data.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Use ```td-agent-gem``` or ```fluent-gem```:
 
-```ruby
-gem 'fluent-plugin-netflow-multiplier'
+```zsh
+$ td-agent-gem install fluent-plugin-netflow-multiplier
+$ fluent-gem install fluent-plugin-netflow-multiplier
 ```
 
-And then execute:
+Or you can use native ```gem``` as well:
 
-    $ bundle
+```zsh
+$ gem install fluent-plugin-netflow-multiplier
+```
 
-Or install it yourself as:
+## Configuration
 
-    $ gem install fluent-plugin-netflow-multiplier
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+TODO: Write something
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fluent-plugin-netflow-multiplier.
+Bug reports and pull requests are welcome on GitHub at https://github.com/codeout/fluent-plugin-netflow-multiplier.
 
+## Copyright and License
+
+Copyright (c) 2016 Shintaro Kojima. Code released under the [Apache License, Version 2.0](LICENSE).
