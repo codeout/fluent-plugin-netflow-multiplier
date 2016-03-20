@@ -29,7 +29,42 @@ $ gem install fluent-plugin-netflow-multiplier
 
 ## Configuration
 
-TODO: Write something
+This is an example to configure this plugin in conjunction with [fluent-plugin-netflow](https://github.com/repeatedly/fluent-plugin-netflow) as input plugin, and stdout as output plugin.
+
+```
+<source>
+  @type netflow
+  bind 0.0.0.0
+  port 2055
+  tag  netflow.event
+</source>
+
+<filter netflow.event>
+  @type netflow_multiplier
+  default_sampling_rate 10000
+</filter>
+
+<match netflow.event>
+  @type stdout
+</match>
+```
+
+### Parameters
+
+**default_sampling_rate**
+
+Default sampling rate.  
+(Default: 1)
+
+**sampling_rate_per_host**
+
+Path to sampling rate definition file which describe per-host rates. The definition file should be in YAML like [this](example/sampling_rate.yml).  
+(Default: nil)
+
+**record_suffix**
+
+Field suffix for mutiplied values. This plugin calculates the values from original fields and stores into other fields appended the suffix. (eg: ```in_bytes``` into ```in_bytes_estimated```)  
+(Default: '_estimated')
 
 ## Contributing
 
