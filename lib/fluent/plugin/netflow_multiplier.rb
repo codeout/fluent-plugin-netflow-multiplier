@@ -29,7 +29,7 @@ module Fluent
         end
       end
 
-      @estimated_fields = FIELDS_TO_MULTIPLY.map {|f| [f, f + @record_suffix] }.to_h
+      @estimated_fields = Hash[FIELDS_TO_MULTIPLY.map {|f| [f, f + @record_suffix] }]
     end
 
     def multiply(record)
