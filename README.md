@@ -72,4 +72,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/codeou
 
 ## Copyright and License
 
-Copyright (c) 2016 Shintaro Kojima. Code released under the [Apache License, Version 2.0](LICENSE).
+Copyright (c) 2018 Shintaro Kojima. Code released under the [Apache License, Version 2.0](LICENSE).
