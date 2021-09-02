@@ -1,6 +1,6 @@
 # fluent-plugin-netflow-multipler
 
-[![Build Status](https://travis-ci.org/codeout/fluent-plugin-netflow-multiplier.svg)](https://travis-ci.org/codeout/fluent-plugin-netflow-multiplier)
+[![Test on Ubuntu](https://github.com/codeout/fluent-plugin-netflow-multiplier/actions/workflows/test-linux.yaml/badge.svg)](https://github.com/codeout/fluent-plugin-netflow-multiplier/actions/workflows/test-linux.yaml)
 
 ## Overview
 
